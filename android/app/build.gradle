@@ -75,11 +75,11 @@ def jscFlavor = 'org.webkit:android-jsc:+'
 android {
     ndkVersion rootProject.ext.ndkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
-    compileSdk rootProject.ext.compileSdkVersion
+    compileSdkVersion 33
 
-    namespace "com.foodiee"
+    namespace "com.aesgloballite"
     defaultConfig {
-        applicationId "com.foodiee"
+        applicationId "com.aesgloballite"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -110,6 +110,8 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
+
+    implementation 'com.facebook.react:react-native:+'
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
